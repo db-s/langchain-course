@@ -16,9 +16,9 @@ if __name__ == "__main__":
     pc.create_index(
         name=index_name,
         vector_type="dense",
-        dimension=1536, # OpenAIEmbeddings Default (text-embedding-3-small)
+        dimension=1536,  # OpenAIEmbeddings Default (text-embedding-3-small)
         metric="cosine",
-        spec=ServerlessSpec(cloud="aws", region="us-east-1")
+        spec=ServerlessSpec(cloud="aws", region="us-east-1"),
     )
 
     print(f"Index {index_name} created")
